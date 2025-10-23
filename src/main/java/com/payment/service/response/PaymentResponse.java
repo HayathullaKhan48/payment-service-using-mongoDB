@@ -13,9 +13,8 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PaymentResponse {
-
     private String id;
-    private String transactionId;
+    private Long transactionId;
     private Long amount;
     private String currency;
     private String paymentMethod;

@@ -5,10 +5,13 @@ import com.payment.service.enums.Status;
 import com.payment.service.request.PaymentRequest;
 import com.payment.service.response.PaymentResponse;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class PaymentMapper {
 
     public static PaymentModel toEntity(PaymentRequest request) {
         return PaymentModel.builder()
+                .transactionId(ThreadLocalRandom.current().nextLong(10000, 999999))
                 .amount(request.getAmount())
                 .currency(request.getCurrency())
                 .paymentMethod(request.getPaymentMethod())

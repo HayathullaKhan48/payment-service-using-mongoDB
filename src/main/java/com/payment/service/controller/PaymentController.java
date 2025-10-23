@@ -41,13 +41,13 @@ public class PaymentController {
         return paymentService.update(id, request);
     }
 
-    @PatchMapping("/statusUpdate/{id}")
-    public PaymentResponse updatePaymentStatus(@PathVariable String id, @RequestParam Status status) {
+    @PatchMapping("/statusUpdate/{id}/{status}")
+    public PaymentResponse updatePaymentStatus(@PathVariable String id, @PathVariable Status status) {
         return paymentService.statusUpdate(id, status);
     }
 
     @DeleteMapping("/delete/{id}")
     public PaymentResponse deletePayment(@PathVariable String id) {
-        return paymentService.softDelete(id);
+        return paymentService.Delete(id);
     }
 }

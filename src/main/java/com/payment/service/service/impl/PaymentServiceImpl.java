@@ -87,7 +87,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public PaymentResponse softDelete(String id) {
+    public PaymentResponse Delete(String id) {
         PaymentModel existing = paymentRepository.findById(id)
                 .orElseThrow(() -> new PaymentNotExistsException("Cannot delete — Payment not found with ID: " + id));
 

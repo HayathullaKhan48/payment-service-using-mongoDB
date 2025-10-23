@@ -13,5 +13,5 @@ public interface PaymentService {
     List<PaymentResponse> searchByCustomerName(String customerName);
     PaymentResponse update(String id, PaymentRequest request);
     PaymentResponse statusUpdate(String id, Status status);
-    PaymentResponse softDelete(String id);
+    PaymentResponse Delete(String id);
 }

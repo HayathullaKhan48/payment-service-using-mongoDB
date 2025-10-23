@@ -12,7 +12,6 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PaymentRequest {
-
     private Long amount;
     private String currency;
     private String paymentMethod;
